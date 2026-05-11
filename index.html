@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulations — borck.education</title>
+  <meta name="description" content="Simulation experiences for teaching and learning — practice in realistic professional environments." />
+  <link rel="icon" href="/favicon.svg" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafaf6;
+      --panel: #f3f2ec;
+      --text: #1a1a1c;
+      --gray-1: #4a4a4f;
+      --gray-2: #82827e;
+      --gray-3: #d6d6cf;
+      --accent: #4a6e62;
+      --font: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --mono: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      padding: 1.25rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .topbar-logo {
+      font-family: var(--mono);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .topbar-logo .dot { color: var(--gray-2); }
+    .topbar-logo .sub { color: var(--accent); }
+
+    .topbar-spacer { flex: 1; }
+
+    .topbar-links { display: flex; gap: 1.25rem; align-items: center; }
+    .topbar-links a {
+      font-size: 0.82rem;
+      color: var(--gray-1);
+      text-decoration: none;
+    }
+    .topbar-links a:hover { color: var(--text); }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 2rem 2rem;
+    }
+
+    .hero { margin-bottom: 3rem; }
+
+    .hero-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gray-2);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--gray-1);
+      line-height: 1.7;
+      max-width: 60ch;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem 1.5rem 1.25rem;
+      background: var(--panel);
+      border: 1px solid var(--gray-3);
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.15s, transform 0.15s;
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .card-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .card-desc {
+      font-size: 0.88rem;
+      color: var(--gray-1);
+      line-height: 1.5;
+      margin-bottom: 0.85rem;
+      flex: 1;
+    }
+
+    .card-url {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--gray-2);
+    }
+
+    .site-footer {
+      max-width: 1100px;
+      margin: 4rem auto 0;
+      padding: 1.5rem 2rem 2rem;
+      border-top: 1px solid var(--gray-3);
+      font-size: 0.85rem;
+      color: var(--gray-2);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a { color: var(--accent); text-decoration: none; }
+    .footer-links a:hover { text-decoration: underline; }
+
+    .site-footer p a { color: var(--accent); text-decoration: none; }
+    .site-footer p a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <a href="/" class="topbar-logo">
+      <span>simulations</span><span class="dot">.</span><span class="sub">borck.education</span>
+    </a>
+    <div class="topbar-spacer"></div>
+    <nav class="topbar-links">
+      <a href="https://borck.education" title="Tools, books, and teaching for educators and students">Education</a>
+      <a href="https://borck.dev" title="Builder, educator, researcher, and consultant">borck.dev</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <div class="hero">
+      <p class="hero-eyebrow">Simulations</p>
+      <h1 class="hero-title">Practice in realistic professional environments.</h1>
+      <p class="hero-sub">
+        Each simulation places students inside a fictional organisation — with the
+        documents, systems, and decisions a real professional encounters. Used in
+        teaching to bridge the gap between coursework and practice.
+      </p>
+    </div>
+
+    <div class="grid">
+
+      <a class="card" href="https://workready.eduserver.au">
+        <div class="card-name">WorkReady</div>
+        <p class="card-desc">A full internship simulation — applying for jobs, navigating onboarding, and working inside a simulated employer for a complete cycle.</p>
+        <div class="card-url">workready.eduserver.au</div>
+      </a>
+
+      <a class="card" href="https://cloudcore.eduserver.au">
+        <div class="card-name">CloudCore</div>
+        <p class="card-desc">Simulated technology company — practice the operational rhythms and decisions of a software-driven business.</p>
+        <div class="card-url">cloudcore.eduserver.au</div>
+      </a>
+
+      <a class="card" href="https://technova.eduserver.au">
+        <div class="card-name">TechNova</div>
+        <p class="card-desc">Simulated tech-sector company — a second environment for company-scale decision practice.</p>
+        <div class="card-url">technova.eduserver.au</div>
+      </a>
+
+      <a class="card" href="https://retailflow.eduserver.au">
+        <div class="card-name">RetailFlow</div>
+        <p class="card-desc">Simulated retail business — practice the operational and analytical work of a retail organisation.</p>
+        <div class="card-url">retailflow.eduserver.au</div>
+      </a>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="https://borck.education">Education</a>
+      <a href="https://borck.dev">borck.dev</a>
+    </div>
+    <p>Michael Borck · Perth, WA · <a href="mailto:hello@borck.dev">hello@borck.dev</a></p>
+  </footer>
+
+</body>
+</html>
