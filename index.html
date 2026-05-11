@@ -135,6 +135,39 @@
       color: var(--gray-2);
     }
 
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gray-2);
+      margin: 3rem 0 1rem;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 0.9rem;
+      background: var(--panel);
+      border: 1px solid var(--gray-3);
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--gray-1);
+      font-size: 0.82rem;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .chip:hover {
+      border-color: var(--accent);
+      color: var(--text);
+    }
+
     .site-footer {
       max-width: 1100px;
       margin: 4rem auto 0;
@@ -192,22 +225,32 @@
 
       <a class="card" href="https://cloudcore.eduserver.au">
         <div class="card-name">CloudCore</div>
-        <p class="card-desc">Simulated technology company — practice the operational rhythms and decisions of a software-driven business.</p>
+        <p class="card-desc">Used across five units for assessment — students design CRM and other software for the simulated company, and evaluate AI capability against real workflows.</p>
         <div class="card-url">cloudcore.eduserver.au</div>
       </a>
 
       <a class="card" href="https://technova.eduserver.au">
         <div class="card-name">TechNova</div>
-        <p class="card-desc">Simulated tech-sector company — a second environment for company-scale decision practice.</p>
+        <p class="card-desc">Outreach-programme simulation — a cybersecurity attack against chatbots marketed as protecting minors online.</p>
         <div class="card-url">technova.eduserver.au</div>
       </a>
 
       <a class="card" href="https://retailflow.eduserver.au">
         <div class="card-name">RetailFlow</div>
-        <p class="card-desc">Simulated retail business — practice the operational and analytical work of a retail organisation.</p>
+        <p class="card-desc">Used in executive education courses — hands-on activities inside a simulated retail business.</p>
         <div class="card-url">retailflow.eduserver.au</div>
       </a>
 
+    </div>
+
+    <h2 class="section-label">WorkReady world</h2>
+    <div class="chips">
+      <a class="chip" href="https://seekjobs.eduserver.au">seek.jobs</a>
+      <a class="chip" href="https://horizonfoundation.eduserver.au">Horizon Foundation</a>
+      <a class="chip" href="https://ironvaleresources.eduserver.au">Ironvale Resources</a>
+      <a class="chip" href="https://meridianadvisory.eduserver.au">Meridian Advisory</a>
+      <a class="chip" href="https://nexuspointsystems.eduserver.au">Nexuspoint Systems</a>
+      <a class="chip" href="https://southerncrossfinancial.eduserver.au">Southern Cross Financial</a>
     </div>
 
   </main>
